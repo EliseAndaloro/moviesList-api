@@ -10,7 +10,7 @@ class MoviesTest extends ApiTestCase
     {
         static::createClient()->request('GET', '444/#/movies');
 
-        //$this->assertResponseIsSuccessful();
+        $this->assertResponseIsSuccessful();
         $this->assertResponseHeaderSame('content-type', 'application/ld+json');
     }
 }
